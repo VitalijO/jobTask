@@ -135,25 +135,25 @@
     }
 
     .instagram-posts img {
-        content: url('/images/1.jpg');
+        content: url('images/1.jpg');
         max-width: 100%;
         height: auto;
     }
 
     .instagram-posts img:nth-child(2) {
-        content: url('/images/2.jpg');
+        content: url('images/2.jpg');
         max-width: 100%;
         height: auto;
     }
 
     .instagram-posts img:nth-child(3) {
-        content: url('/images/3.jpg');
+        content: url('images/3.jpg');
         max-width: 100%;
         height: auto;
     }
 
     .instagram-posts img:nth-child(4) {
-        content: url('/images/4.jpg');
+        content: url('images/4.jpg');
         max-width: 100%;
         height: auto;
     }

@@ -2,7 +2,7 @@
 
     position: relative;
     margin-top: 100px;
-    background: url('/images/hero.jpg') center/cover no-repeat;
+    background: url('../images/hero.jpg') center/cover no-repeat;
     height: 350px;
     display: flex;
     justify-content: center;
