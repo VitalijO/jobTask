@@ -1,0 +1,36 @@
+.hero {
+
+    position: relative;
+    margin-top: 100px;
+    background: url('/images/hero.jpg') center/cover no-repeat;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-content {
+    background: rgba(255, 255, 255, 0.9);
+    padding:  24px 39px;
+    text-align: center;
+    max-width: 805px;
+   
+  }
+  
+  .hero-title { 
+    color: #5079b2;
+    font-size: 31px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    font-family: 'Lora', Georgia, serif;
+}
+  
+  .hero-text {
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #351303;
+    line-height: 1.5;
+  }
+  
+ 

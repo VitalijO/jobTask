@@ -1,0 +1,28 @@
+
+
+.about{
+    background: #FBEAE1;
+   padding: 25px;
+   text-align: center;
+
+}.about-text-wrap{
+     margin-bottom: 24px;
+}
+ 
+.about-text{
+    font-family: 'Lora', Georgia, serif;
+    font-size: 20px ;
+    max-width: 805px;    
+    margin: 0 auto;      
+    color: #351301;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.about-link{
+    font-family: 'Lora', Georgia, serif;
+    color: #5079B2;
+    font-size: 20px;
+    
+    text-decoration: underline;
+}

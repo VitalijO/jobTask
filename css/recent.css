@@ -1,0 +1,102 @@
+
+.container.recent{
+     text-align: center;
+     padding: 0px 24px;
+}
+
+.recent-thoughts {
+   
+    padding: 20px;
+}
+
+.recent-title{
+    text-align: center;
+    color: #5079B2;
+    margin: 32px 0px;
+
+}
+
+.recent-title-sm{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 400;
+    font-weight: 20px;
+    color: #351303;
+}
+
+.recent-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+.main-article {
+    flex: 2;
+    background: white;
+    padding: 20px;
+     
+     
+}
+.main-article img {
+    width: 100%;
+     text-align: center;
+}
+.side-articles {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.article {
+    background: white;
+    padding: 10px;
+    
+     
+    text-align: center;
+}
+.article img {
+    width: 100%;
+     
+}
+.recent-read-more {
+    background-color: #996F51;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+   
+    cursor: pointer;
+}
+.recent-text{
+    margin: 0 auto;
+    margin-bottom: 24px;
+    max-width: 442px;
+     
+}
+
+.recent-text-sign{
+padding: 24px 0px ;
+}
+
+@media (max-width: 548px) {
+    .recent-wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-article,
+    .side-articles {
+        width: 100%;
+    }
+
+    .side-articles {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article {
+        width: 100%;
+        text-align: center;
+    }
+}

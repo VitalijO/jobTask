@@ -1,0 +1,345 @@
+.header-content{
+  background-color: #FBEAE1;
+  display: flex;             
+  align-items: center;      
+  justify-content: space-between;   
+}
+
+.menu-hider{
+  display: flex;
+}
+
+.nav-header__menu {
+  display: flex;
+  flex-wrap: wrap; /* Додаємо врап */
+  justify-content: flex-end /* Вирівнюємо по центру */
+  gap: 18px; /* Відстань між елементами */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-header__right {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap;
+ }
+
+ .menu-item {
+    position: relative;
+    background-color: #FBEAE1;
+}
+
+.menu-link {
+    display: block;
+    margin: 0 2px;
+    padding: 2px 16px;
+    color: #072268
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    
+    border: 1px solid rgb(185, 176, 176);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
+    
+}
+
+.menu-link:hover {
+    color: #5079b2;
+}
+
+
+
+.schedule{
+    width: 90px;
+    height: 36px;
+    background-color: #d75670;
+    color: #fff;
+    display: flex;                 
+    justify-content: center;     
+    align-items: center;
+    padding: 0px 20px ;
+}
+.schedule:hover{
+color: #fff;
+background-color: #b0475c;
+}
+
+
+.menu-link-sub {
+    display: block;
+    padding: 10px 15px;
+     
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+ 
+
+.sub-menu:hover { 
+    color: #d75670; 
+    z-index: 8;    
+  }
+
+  .sub-menu > .menu-item:hover{
+    background-color: #f1e4e7;
+  }
+
+
+
+ 
+.menu-item--has-children:hover > .sub-menu {
+    display: block;
+    
+    top: 30px;  
+    left: 0px;  
+    z-index: 1000;
+    
+}
+
+.header {
+ 
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: #FBEAE1;
+   
+ 
+ 
+  padding: 10px 20px;
+  z-index: 12;
+   
+}
+
+/*______Logo______*/ 
+.header .logo {
+  display: block;
+  padding: 15px 0;
+  
+}
+
+.header .logo img {
+  display: block;
+  width: 180px;
+  height: 52px;
+  object-fit: contain;
+}
+
+
+.search-input {
+  display: none; 
+}
+.search-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+
+ 
+
+ .menu-arrow{
+    stroke: currentColor;
+ }
+
+
+ .burger-menu{
+    display: none;
+}
+
+
+ /* _____________________________mobile menu_______________  */
+ .burger-menu {
+    display: none;  
+  }
+  
+  @media screen and (max-width: 768px) {
+
+    
+    .nav-header__right {
+      position: fixed;
+      top: 80px;
+      right: 0;
+      
+      background: white;
+      box-shadow: -4px 0 6px rgba(99, 58, 58, 0.1);
+      opacity: 0;   
+      visibility: hidden; 
+      transition: opacity 0.3s ease, visibility 0.3s ease; 
+    }
+  
+     
+    .nav-header__right.active {
+      opacity: 1;  
+      visibility: visible;  
+      width: 100%;
+      min-height: 500px;
+    }
+  
+    
+    .burger-menu {
+      display: block;
+      width: 40px;
+      height: 30px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  
+    .burger-menu::before,
+    .burger-menu::after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 2px;
+      background-color: #072768;
+      left: 0;
+      transition: transform 0.3s ease;
+    }
+  
+    .burger-menu::before {
+      top: 0;
+    }
+  
+    .burger-menu::after {
+      bottom: 0;
+    }
+  
+    .burger-menu .menu-icon__line {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background-color: #072768;
+      transform: translateY(-50%);
+      transition: opacity 0.3s ease;
+    }
+  
+     
+    .burger-menu.active::before {
+      transform: translateY(14px) rotate(45deg);  
+    }
+  
+    .burger-menu.active::after {
+      transform: translateY(-14px) rotate(-45deg);  
+    }
+  
+    .burger-menu.active .menu-icon__line {
+      opacity: 0;  
+    }
+
+
+    .schedule{
+      width: 100%;
+      background-color: black;
+      color: white;
+      
+    }
+
+    .menu-item {
+      width: 90%;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      background: #fff;
+      border: none;
+    }
+
+    .menu-link {
+      
+      padding: 12px 20px;
+      font-size: 18px;
+      
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .menu-link:hover {
+      background: #f7f7f7;
+    }
+
+    /* Ховаємо підменю */
+    .sub-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+
+    
+      background: #f8f8f8;
+    }
+
+    /* Показуємо підменю при натисканні */
+    .menu-item--has-children.active > .sub-menu {
+      display: block;
+    }
+
+    /* Стилі для підменю */
+    .sub-menu .menu-item {
+      padding-left: 20px;
+    }
+
+    .sub-menu .menu-link {
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+
+    
+    .sub-menu {
+
+      position: static;  
+      display: block;  
+      max-height: 0;  
+      overflow: hidden;  
+      transition: max-height 0.3s ease-out;  
+      background: #f8f8f8;  
+      padding-left: 20px;  
+      border: none;
+      
+    }
+
+    .menu-item--has-children.active > .sub-menu {
+      max-height: 300px;
+    }
+
+    .search-input {
+      display: block;
+      width: 100%;
+      padding: 8px 15px;
+      border: 1px solid #d1d1d1;
+      border-radius: 20px;
+      outline: none;
+  }
+
+  .search-wrapper {
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      border: 1px solid #d1d1d1;
+      border-radius: 20px;
+      padding: 5px 10px;
+      width: 100%; 
+  }
+
+  .search-icon {
+     
+
+ 
+  }
+  
+
